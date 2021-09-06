@@ -5,7 +5,10 @@ import logging
 import os
 import os.path as osp
 from pathlib import Path
-import toml
+try:
+    import tomli as toml
+except ImportError:
+    import toml
 import re
 
 from .versionno import normalise_version
